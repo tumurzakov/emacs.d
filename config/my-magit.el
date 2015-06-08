@@ -180,4 +180,6 @@
       (evil-define-key 'normal magit-branch-manager-mode-map (kbd "j") 'magit-goto-next-section)
       (evil-define-key 'normal magit-branch-manager-mode-map (kbd "k") 'magit-goto-previous-section))))
 
+      (setq magit-last-seen-setup-instructions "1.4.0")
+
 (provide 'my-magit)

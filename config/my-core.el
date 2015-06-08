@@ -125,9 +125,10 @@
 (defun my-find-file-check-large-file ()
   "Check the size of files when loading, and don't let me break them."
   (when (> (buffer-size) (* 1024 1024 1024))
-    (setq buffer-read-only t)
-    (buffer-disable-undo)
-    (fundamental-mode)))
+    ;(setq buffer-read-only t)
+    ;(buffer-disable-undo)
+    ;(fundamental-mode)
+  ))
 
 (defun my-setup-file-defaults ()
   "Set the defaults for a new file opening."
@@ -200,5 +201,8 @@ This command only has an effect on graphical frames."
   (set-fill-column 80))
 
 (add-hook 'help-mode-hook 'my-setup-help-mode)
+
+; do not show warnings
+;(setq warning-minimum-level :error)
 
 (provide 'my-core)

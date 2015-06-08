@@ -2,6 +2,7 @@
   :ensure company
   :init
   (progn
+    (require 'company)
     (global-company-mode)
     )
   :config

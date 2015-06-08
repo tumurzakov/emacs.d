@@ -12,8 +12,8 @@
   :demand evil-leader
   :init
   (progn
-    (evil-leader/set-leader ",")
-    (global-evil-leader-mode t)))
+    (global-evil-leader-mode t)
+    (evil-leader/set-leader "\\")))
 
 
 ;; Here's what we've all been waiting for.
@@ -28,10 +28,10 @@
     (setq evil-want-C-w-in-emacs-state t)
     (setq evil-search-module        'isearch)
     (setq evil-magic                'very-magic)
-    (setq evil-emacs-state-cursor   '("#dfaf8f" box))
-    (setq evil-normal-state-cursor  '("#f8f893" box))
-    (setq evil-insert-state-cursor  '("#f8f893" bar))
-    (setq evil-replace-state-cursor '("#cc9393" box))
+    (setq evil-emacs-state-cursor   '("#ccc" box))
+    (setq evil-normal-state-cursor  '("#ccc" box))
+    (setq evil-insert-state-cursor  '("#ccc" bar))
+    (setq evil-replace-state-cursor '("#ccc" box))
     (setq evil-want-fine-undo t)
     (setq evil-want-change-word-to-end t)
 
@@ -54,6 +54,7 @@
       :ensure evil-surround
       :config
       (progn
+        (require 'evil-surround)
         (global-evil-surround-mode 1)))
 
     (evil-set-initial-state 'flycheck-error-list-mode 'normal)
@@ -64,12 +65,12 @@
     (evil-set-initial-state 'term-mode 'emacs)
     (evil-set-initial-state 'multi-term-mode 'emacs)
 
-    (use-package key-chord
-      :ensure key-chord
-      :diminish key-chord-mode
-      :config
-      (progn
-        (key-chord-mode 1)))
+    ;(use-package key-chord
+      ;:ensure key-chord
+      ;:diminish key-chord-mode
+      ;:config
+      ;(progn
+        ;(key-chord-mode 1)))
 
     (evil-define-text-object my-evil-next-match (count &optional beg end type)
       "Select next match."

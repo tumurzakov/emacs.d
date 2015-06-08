@@ -7,4 +7,7 @@
 
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
 
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.ctp\\'" . web-mode))
+
 (provide 'my-filetypes)

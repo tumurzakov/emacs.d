@@ -6,6 +6,7 @@
 (use-package keychain-environment
   :ensure keychain-environment
   :init
+  (require 'keychain-environment)
   (keychain-refresh-environment))
 
 

@@ -11,6 +11,7 @@
   :diminish elisp-slime-nav-mode
   :init
   (progn
+    (require 'elisp-slime-nav)
     (defun my-lisp-hook ()
       (progn
         (elisp-slime-nav-mode)

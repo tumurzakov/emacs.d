@@ -58,8 +58,8 @@
       (kbd "c")   'neotree-create-node
       (kbd "r")   'neotree-rename-node
       (kbd "d")   'neotree-delete-node
-      (kbd "j")   'neotree-next-node
-      (kbd "k")   'neotree-previous-node
+      (kbd "j")   'neotree-next-line
+      (kbd "k")   'neotree-previous-line
       (kbd "SPC") 'neotree-change-root
       (kbd "q")   'neotree-hide
       (kbd "l")   'neotree-enter
