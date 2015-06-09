@@ -1,4 +1,4 @@
-(require 'my-c)
+;(require 'my-c)
 ;(require 'my-clojure)
 (require 'my-elisp)
 (require 'my-go)

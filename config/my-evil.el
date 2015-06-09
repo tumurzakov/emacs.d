@@ -6,7 +6,8 @@
 (use-package evil-tabs
   :ensure evil-tabs
   :init
-  (require 'evil-tabs))
+  (require 'evil-tabs)
+  (global-evil-tabs-mode t))
 
 ;; In order to work properly, we need to load evil-leader-mode before we load
 ;; evil-mode.

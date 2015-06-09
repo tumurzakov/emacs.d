@@ -52,6 +52,7 @@
         (set-text-properties start (point) '(face neo-header-face)))
       (neo-buffer--newline-and-begin))
     (after 'evil
+    (define-key evil-normal-state-map (kbd "`") 'neotree-toggle)
     (evil-set-initial-state 'neotree-mode 'normal)
     (evil-define-key 'normal neotree-mode-map
       (kbd "RET") 'neotree-enter

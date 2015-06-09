@@ -52,4 +52,6 @@
 (require 'my-leader-keys)
 (require 'my-bookmarks)
 
+(find-file "~/org/main.org")
+
 (provide 'init)

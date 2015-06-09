@@ -2,7 +2,6 @@
 ;;
 ;; <leader> keybindings for evil-leader
 
-
 (evil-leader/set-key
   "$"          'nlinum-mode
   "qq"         'kill-this-buffer
