@@ -6,8 +6,7 @@
 ;; config/my-languages/ language file.
 
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
-
-(require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.ctp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
 
 (provide 'my-filetypes)

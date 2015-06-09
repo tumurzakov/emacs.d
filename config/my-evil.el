@@ -3,6 +3,10 @@
 ;; Settings for ostracizing me from both the Emacs and Vim communities.
 ;; a.k.a. evil-mode
 
+(use-package evil-tabs
+  :ensure evil-tabs
+  :init
+  (require 'evil-tabs))
 
 ;; In order to work properly, we need to load evil-leader-mode before we load
 ;; evil-mode.
@@ -34,6 +38,7 @@
     (setq evil-replace-state-cursor '("#ccc" box))
     (setq evil-want-fine-undo t)
     (setq evil-want-change-word-to-end t)
+    (setq x-select-enable-clipboard nil)
 
 
     (use-package evil-nerd-commenter
@@ -278,5 +283,10 @@ whether to call indent-according-to-mode."
   :init
   ;; C-i and C-o don't work unless we load it again like this ...
   (require 'evil-jumper))
+
+(use-package evil-org
+  :ensure evil-org
+  :init
+  (require 'evil-org))
 
 (provide 'my-evil)

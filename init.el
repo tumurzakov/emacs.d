@@ -36,7 +36,7 @@
 ;(require 'my-woman)
 ;(require 'my-comint)
 ;(require 'my-unbound-keys)
-;(require 'my-languages)
+(require 'my-languages)
 ;(require 'my-shell)
 (require 'my-filetypes)
 (require 'my-term)
