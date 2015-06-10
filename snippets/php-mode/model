@@ -1,0 +1,5 @@
+#name : model
+# --
+<?php
+class $0 extends AppModel {
+}

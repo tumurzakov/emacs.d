@@ -39,6 +39,7 @@
     (setq evil-replace-state-cursor '("#ccc" box))
     (setq evil-want-fine-undo t)
     (setq evil-want-change-word-to-end t)
+
     (setq x-select-enable-clipboard nil)
 
 
@@ -242,10 +243,8 @@ whether to call indent-according-to-mode."
 
     (define-key evil-normal-state-map (kbd "C-q")   'universal-argument)
 
-    (define-key evil-normal-state-map (kbd "C-h")   'evil-window-left)
-    (define-key evil-normal-state-map (kbd "C-j")   'evil-window-down)
-    (define-key evil-normal-state-map (kbd "C-k")   'evil-window-up)
-    (define-key evil-normal-state-map (kbd "C-l")   'evil-window-right)
+    (define-key evil-normal-state-map (kbd "C-j")   'evil-scroll-down)
+    (define-key evil-normal-state-map (kbd "C-k")   'evil-scroll-up)
     (define-key evil-normal-state-map (kbd "-") (kbd "dd"))
 
     (define-key evil-normal-state-map "a"           'evil-append)

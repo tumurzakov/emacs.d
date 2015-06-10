@@ -4,6 +4,7 @@
   :init
   (progn
     (setq ag-highlight-search t)
+    (setq ag-reuse-window 't)
     (setq ag-reuse-buffers t)
     (defun my-setup-ag ()
       "Function called to set my ag stuff up."

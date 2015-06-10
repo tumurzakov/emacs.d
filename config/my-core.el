@@ -203,6 +203,6 @@ This command only has an effect on graphical frames."
 (add-hook 'help-mode-hook 'my-setup-help-mode)
 
 ; do not show warnings
-;(setq warning-minimum-level :error)
+(setq warning-minimum-level :error)
 
 (provide 'my-core)

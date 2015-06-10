@@ -1,0 +1,8 @@
+#name : shell
+# --
+<?php
+class $0 extends AppShell {
+    public $uses = array();
+    public function main() {
+    }
+}

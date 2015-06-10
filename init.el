@@ -33,11 +33,11 @@
 (require 'my-interaction)
 (require 'my-flycheck)
 (require 'my-helm)
-;(require 'my-woman)
-;(require 'my-comint)
-;(require 'my-unbound-keys)
+(require 'my-woman)
+(require 'my-comint)
+(require 'my-unbound-keys)
 (require 'my-languages)
-;(require 'my-shell)
+(require 'my-shell)
 (require 'my-filetypes)
 (require 'my-term)
 (require 'my-magit)
@@ -51,6 +51,7 @@
 (require 'my-sessions)
 (require 'my-leader-keys)
 (require 'my-bookmarks)
+(require 'my-emmet)
 
 (find-file "~/org/main.org")
 

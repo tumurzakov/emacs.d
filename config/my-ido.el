@@ -144,6 +144,7 @@
       :ensure ido-vertical-mode
       :init
       (progn
+       (require 'ido-vertical-mode)
        (ido-vertical-mode 1)))))
 
 (provide 'my-ido)
