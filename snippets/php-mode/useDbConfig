@@ -1,0 +1,3 @@
+#name : useDbConfig
+# --
+public $useDbConfig = '$0';

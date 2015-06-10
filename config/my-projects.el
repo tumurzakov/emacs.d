@@ -47,10 +47,16 @@
   :ensure neotree
   :config
   (progn
+
+    (defun neotree-open-tab (arg)
+      (interactive "P")
+      (evil-tabs-tabedit arg))
+
     (defun neo-buffer--insert-header ()
       (let ((start (point)))
         (set-text-properties start (point) '(face neo-header-face)))
       (neo-buffer--newline-and-begin))
+
     (after 'evil
     (define-key evil-normal-state-map (kbd "`") 'neotree-toggle)
     (evil-set-initial-state 'neotree-mode 'normal)
@@ -64,6 +70,7 @@
       (kbd "SPC") 'neotree-change-root
       (kbd "q")   'neotree-hide
       (kbd "l")   'neotree-enter
+      (kbd "t")   'neotree-open-tab
       )
     )
     ))

@@ -3,6 +3,7 @@
 ;; <leader> keybindings for evil-leader
 
 (evil-leader/set-key
+  "m"          (lambda () (interactive) (find-file "~/org/main.org"))
   "$"          'nlinum-mode
   "qq"         'kill-this-buffer
   "qw"         'evil-window-delete

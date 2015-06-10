@@ -4,7 +4,7 @@
 ;   :config
 ;   (progn
 ;     (unless noninteractive
-;     (load-theme 'pro t))))
+;     (load-theme 'zenburn t))))
 
 ;(use-package professional-theme
 ;   :ensure professional-theme
