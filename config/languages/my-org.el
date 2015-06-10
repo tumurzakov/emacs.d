@@ -50,10 +50,10 @@
 
     (setq org-refile-targets (quote ((nil :maxlevel . 9)
                                      (org-agenda-files :maxlevel . 9))))
-    
+
     ;; project link type
     (org-add-link-type "project" 'org-project-open)
-    
+
     (defun org-project-open (path)
       "Open project with PATH"
       (funcall 'neotree-dir path))
