@@ -39,7 +39,7 @@
     (setq evil-replace-state-cursor '("#ccc" box))
     (setq evil-want-fine-undo t)
     (setq evil-want-change-word-to-end t)
-
+    (electric-indent-mode +1)
     (setq x-select-enable-clipboard nil)
 
 
@@ -233,10 +233,6 @@ whether to call indent-according-to-mode."
     (define-key evil-insert-state-map (kbd "RET") 'my-ret-and-indent)
     (define-key evil-insert-state-map (kbd "<S-backspace>")
       'backward-delete-char-untabify)
-    (define-key evil-insert-state-map (kbd "<S-return>")
-      'electric-indent-just-newline)
-    (define-key evil-normal-state-map (kbd "<S-return>")
-      'electric-indent-just-newline)
 
     (define-key evil-normal-state-map (kbd "SPC a") 'ag)
     (define-key evil-normal-state-map (kbd "SPC SPC") 'helm-M-x)

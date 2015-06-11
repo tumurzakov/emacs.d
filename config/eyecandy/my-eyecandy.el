@@ -16,7 +16,7 @@
 (global-hl-line-mode 0)
 (set-face-background 'hl-line "#eee")
 
-;; Show parentheses
+;;; Show parentheses
 (use-package paren
   :ensure paren
   :init
@@ -27,7 +27,7 @@
     (show-paren-mode 1)
     (custom-set-faces
      '(show-paren-match ((((class color) (background light)) (:background "#eee")))))
-    )
+  ))
 
 ;; highlight entire expression when matching paren is not visible;
 ;; otherwise just highlight matching paren
