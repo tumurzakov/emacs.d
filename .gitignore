@@ -22,6 +22,5 @@ semanticdb/
 tutorial/
 url/
 srecode-map.el
-/config/my-emmet.el
-/snippets/php-mode/cont
-/snippets/php-mode/func
+bookmarks
+projectile-bookmarks.eld

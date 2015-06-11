@@ -49,7 +49,8 @@
   (progn
 
     (defun neotree-open-tab (full-path &optional arg)
-      (evil-tabs-tabedit full-path))
+      (evil-tabs-tabedit full-path)
+      )
 
     (defun neotree-create-dir (filename)
       "ido breaks neotree table creation"

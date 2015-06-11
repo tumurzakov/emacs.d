@@ -30,7 +30,7 @@
     (define-key company-active-map (kbd "SPC") 'my-company-pass-key)
     (define-key company-active-map "\e\e\e" 'company-abort)
     (define-key company-active-map "\C-g" 'company-abort)
-    (define-key company-active-map [tab] 'company-complete-selection)
+    (define-key company-active-map (kbd "TAB") 'company-complete-selection)
     (define-key company-active-map (kbd "S-TAB") 'company-complete-common)
     (define-key company-active-map (kbd "<f1>") 'company-show-doc-buffer)
     (define-key company-active-map "\C-w" 'company-show-location)

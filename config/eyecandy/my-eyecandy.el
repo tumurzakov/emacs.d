@@ -13,11 +13,21 @@
 ;     (unless noninteractive
 ;     (load-theme 'professional t))))
 
-;(global-hl-line-mode t)
-;(set-face-background 'hl-line "#3e4446")
+(global-hl-line-mode 0)
+(set-face-background 'hl-line "#eee")
 
 ;; Show parentheses
-(show-paren-mode 1)
+(use-package paren
+  :ensure paren
+  :init
+  (progn
+    (require 'paren))
+  :config
+  (progn
+    (show-paren-mode 1)
+    (custom-set-faces
+     '(show-paren-match ((((class color) (background light)) (:background "#eee")))))
+    )
 
 ;; highlight entire expression when matching paren is not visible;
 ;; otherwise just highlight matching paren
@@ -35,12 +45,12 @@
     (sml/setup)
     ))
 
-;(use-package rainbow-mode
-;  :ensure rainbow-mode)
+(use-package rainbow-mode
+  :ensure rainbow-mode)
 
 ;(use-package rainbow-delimiters
 ;  :ensure rainbow-delimiters
-  ;:idle
+;  :idle
 ;  :init
 ;  (progn
 ;    (rainbow-delimiters-mode-enable)

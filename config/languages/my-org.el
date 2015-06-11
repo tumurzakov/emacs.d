@@ -44,8 +44,6 @@
 
     (setq org-hide-leading-stars 1)
 
-    (setq org-blank-before-new-entry 1)
-
     (setq org-agenda-files (quote ("~/org")))
 
     (setq org-refile-targets (quote ((nil :maxlevel . 9)
