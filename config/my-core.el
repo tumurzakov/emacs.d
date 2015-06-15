@@ -6,10 +6,10 @@
 (eval-when-compile (require 'cl))
 (require 'cl-lib)
 
-(defvar my-terminal-emulator "urxvtc"
-  "Terminal emulator to be spawned with my-spawn-terminal-here.")
-(defvar my-graphical-font "Gohufont-12"
-  "Font used for graphical editing sessions.")
+(defvar my-terminal-emulator "terminator"
+   "Terminal emulator to be spawned with my-spawn-terminal-here.")
+(defvar my-graphical-font "DejaVu Sans Mono:bold:italic"
+   "Font used for graphical editing sessions.")
 
 ;; Don't show those horrible buttons
 (tool-bar-mode -1)
@@ -122,17 +122,17 @@
 
 ;; Repurposed from
 ;; <https://github.com/bling/dotemacs/blob/master/config/init-core.el>
-(defun my-find-file-check-large-file ()
-  "Check the size of files when loading, and don't let me break them."
-  (when (> (buffer-size) (* 1024 1024 1024))
-    ;(setq buffer-read-only t)
-    ;(buffer-disable-undo)
-    ;(fundamental-mode)
-  ))
+;; (defun my-find-file-check-large-file ()
+;;   "Check the size of files when loading, and don't let me break them."
+;;   (when (> (buffer-size) (* 1024 1024 1024))
+;;     (setq buffer-read-only t)
+;;     (buffer-disable-undo)
+;;     (fundamental-mode)
+;;     ))
 
 (defun my-setup-file-defaults ()
   "Set the defaults for a new file opening."
-  (my-find-file-check-large-file)
+  ;; (my-find-file-check-large-file)
   (setq show-trailing-whitespace t)
   (electric-indent-mode 1))
 
