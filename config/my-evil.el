@@ -20,7 +20,6 @@
     (global-evil-leader-mode t)
     (evil-leader/set-leader "\\")))
 
-
 ;; Here's what we've all been waiting for.
 ;; Recreate Vim inside Emacs.
 (use-package evil
@@ -56,13 +55,6 @@
         (setq global-evil-matchit-mode t)
         (define-key evil-normal-state-map "%" 'evilmi-jump-items)))
 
-
-    (use-package evil-surround
-      :ensure evil-surround
-      :config
-      (progn
-        (require 'evil-surround)
-        (global-evil-surround-mode 1)))
 
     (evil-set-initial-state 'flycheck-error-list-mode 'normal)
     (evil-set-initial-state 'git-commit-mode 'insert)
@@ -284,5 +276,32 @@ whether to call indent-according-to-mode."
   :ensure evil-org
   :init
   (require 'evil-org))
+
+(use-package evil-surround
+  :ensure evil-surround
+  :config
+  (progn
+
+    (require 'evil-surround)
+    (global-evil-surround-mode 1)
+
+    (setq-default evil-surround-pairs-alist '((?\( . ("(" . ")"))
+                                              (?\[ . ("[" . "]"))
+                                              (?\{ . ("{" . "}"))
+                                              (?\<  . ("< " . " >"))
+
+                                              (?\) . ("( " . " )"))
+                                              (?\] . ("[ " . " ]"))
+                                              (?\} . ("{ " . " }"))
+                                              (?\>  . ("< " . " >"))
+
+                                              (?\_ . ("<?php echo __(\"" . "\"); ?>"))
+                                              (?\- . ("<?php echo " . "; ?>"))
+                                              (?\+ . ("<?php " . "; ?>"))
+                                              (?\= . ("<?php " . " ?>"))
+
+                                              (?t . evil-surround-read-tag)))
+
+    ))
 
 (provide 'my-evil)
