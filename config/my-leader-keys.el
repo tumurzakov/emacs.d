@@ -11,6 +11,7 @@
   "Q"          'kill-buffer-and-window
   "e"          'pp-eval-last-sexp
   "h"          'dired-jump
+  "u"          'undo-tree-visualize
   ">"          'find-file-at-point
   "B"          'ibuffer
   "\\"         'split-window-horizontally

@@ -8,7 +8,7 @@
 
 (defvar my-terminal-emulator "terminator"
    "Terminal emulator to be spawned with my-spawn-terminal-here.")
-(defvar my-graphical-font "DejaVu Sans Mono:bold:italic"
+(defvar my-graphical-font "Monospace-12"
    "Font used for graphical editing sessions.")
 
 ;; Don't show those horrible buttons
@@ -186,8 +186,9 @@ FONT is the name of a xft font, like `Monospace-10'."
 (defun my-use-default-font (&optional frame)
   "Set the frame font to the font name in the variable my-graphical-font.
 This command only has an effect on graphical frames."
-  (interactive)
-  (when window-system (my-set-window-font my-graphical-font)))
+  ;; (interactive)
+  ;; (when window-system (my-set-window-font my-graphical-font))
+)
 
 (add-hook 'after-make-frame-functions 'my-use-default-font)
 

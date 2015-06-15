@@ -72,4 +72,14 @@
 
 ;(require 'my-modeline)
 
+(use-package nlinum
+  :ensure nlinum
+  :init
+  (progn
+    (require 'nlinum))
+  :config
+  (progn
+    (set-face-attribute 'linum nil :background "white")
+    ))
+
 (provide 'my-eyecandy)
