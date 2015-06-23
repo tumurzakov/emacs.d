@@ -42,12 +42,17 @@
 
     (defun org-project-open (path)
       "Open project with PATH"
-      (funcall 'neotree-dir path))
+      (funcall 'evil-tabs-tabedit path))
 
     (add-hook 'org-agenda-mode-hook
               (lambda ()
                 (org-save-all-org-buffers)
                 ))
+
+    (define-key org-agenda-mode-map "j" 'evil-next-line)
+    (define-key org-agenda-mode-map "k" 'evil-previous-line)
+    (define-key org-agenda-mode-map "h" 'evil-backward-char)
+    (define-key org-agenda-mode-map "l" 'evil-forward-char)
 
     )
   )

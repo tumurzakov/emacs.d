@@ -206,4 +206,6 @@ This command only has an effect on graphical frames."
 ; do not show warnings
 (setq warning-minimum-level :error)
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 (provide 'my-core)
