@@ -41,7 +41,7 @@
 (require 'my-filetypes)
 (require 'my-term)
 (require 'my-magit)
-;(require 'my-android)
+(require 'my-android)
 (require 'my-eshell)
 (require 'my-ielm)
 (require 'my-package-list)

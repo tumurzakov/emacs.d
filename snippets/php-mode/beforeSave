@@ -1,0 +1,5 @@
+public function beforeSave($options = array()) {
+    parent::beforeSave($options);
+    $0
+    return true;
+}

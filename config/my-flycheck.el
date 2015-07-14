@@ -6,7 +6,7 @@
   :ensure flycheck
   :init
   (progn
-        (add-hook 'after-init-hook #'global-flycheck-mode))
+    (add-hook 'after-init-hook #'global-flycheck-mode))
   :config
   (progn
     (setq flycheck-check-syntax-automatically '(save mode-enabled))

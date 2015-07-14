@@ -7,6 +7,7 @@
     ;; Custom Key Bindings
     (global-set-key (kbd "<f8>") 'org-cycle-agenda-files)
     (global-set-key (kbd "C-c c") 'org-capture)
+
     )
   :config
   (progn
@@ -47,12 +48,11 @@
     (add-hook 'org-agenda-mode-hook
               (lambda ()
                 (org-save-all-org-buffers)
+                (define-key org-agenda-mode-map "j" 'evil-next-line)
+                (define-key org-agenda-mode-map "k" 'evil-previous-line)
+                (define-key org-agenda-mode-map "h" 'evil-backward-char)
+                (define-key org-agenda-mode-map "l" 'evil-forward-char)
                 ))
-
-    (define-key org-agenda-mode-map "j" 'evil-next-line)
-    (define-key org-agenda-mode-map "k" 'evil-previous-line)
-    (define-key org-agenda-mode-map "h" 'evil-backward-char)
-    (define-key org-agenda-mode-map "l" 'evil-forward-char)
 
     )
   )

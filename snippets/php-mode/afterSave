@@ -1,0 +1,4 @@
+public function afterSave($create, $options = array()) {
+    parent::afterSave($create, $options);
+    $0
+}
