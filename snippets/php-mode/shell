@@ -1,8 +1,28 @@
-#name : shell
-# --
 <?php
 class $0 extends AppShell {
-    public $uses = array();
+    public $uses = array('Model');
     public function main() {
+        $audit = array(
+            'shell'=>'Shell name',
+            'started' => strftime("%F %T", time()),
+        );
+
+        try {
+            $audit['result'] = $this->run();
+        } catch(Exception $e) {
+            $audit['status'] = 'error';
+            $audit['error'] = $e->getMessage();
+        }
+
+        $audit['finished'] = strftime("%F %T", time());
+
+        $this->Model->audit('message', 'main', $audit);
+
+        $this->out(print_r($audit, true));
     }
+
+    private function run() {
+        return true;
+    }
+
 }
