@@ -52,6 +52,7 @@
                 (define-key org-agenda-mode-map "k" 'evil-previous-line)
                 (define-key org-agenda-mode-map "h" 'evil-backward-char)
                 (define-key org-agenda-mode-map "l" 'evil-forward-char)
+                (define-key org-agenda-mode-map (kbd "C-w C-w") 'windmove-left)
                 ))
 
     )

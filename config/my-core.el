@@ -99,6 +99,8 @@
 (set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
+(setq default-buffer-file-coding-system 'utf-8)
+(setq x-select-request-type '(UTF8_STRING))
 
 ;; This isn't a typewriter (even if it is a terminal); one space after sentences,
 ;; please.

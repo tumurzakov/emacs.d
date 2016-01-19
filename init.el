@@ -8,6 +8,10 @@
                          ("org" . "http://orgmode.org/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")))
 
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "google-chrome")
+
+
 (require 'package)
 (package-initialize)
 (setq package-enable-at-startup nil)

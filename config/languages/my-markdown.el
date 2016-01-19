@@ -11,6 +11,9 @@
     (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
     (add-to-list 'auto-mode-alist '("\\.page\\'" . markdown-mode))
     (add-hook 'markdown-mode-hook 'visual-line-mode)
+
+    (require 'checkbox)
+    (global-set-key (kbd "C-c C-c t") 'checkbox-toggle)
     )
   )
 
