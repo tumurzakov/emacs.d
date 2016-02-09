@@ -62,6 +62,13 @@
 
     )
 
+    (defun my-org-clocktable-indent-string (level)
+      (if (= level 1) ""
+        (let ((str " "))
+          (dotimes (k (1- level) str)
+            (setq str (concat "……" str))))))
+    (advice-add 'org-clocktable-indent-string :override #'my-org-clocktable-indent-string)
+
     (setq org-agenda-files (quote ("~/org")))
 
     (setq org-refile-targets (quote ((nil :maxlevel . 9)
