@@ -8,6 +8,10 @@
     (global-set-key (kbd "<f8>") 'org-cycle-agenda-files)
     (global-set-key (kbd "C-c c") 'org-capture)
 
+    (require 'org-ehtml)
+    (setq org-ehtml-docroot (expand-file-name "~/org"))
+    (ws-start org-ehtml-handler 8040)
+
     )
   :config
   (progn
@@ -31,7 +35,32 @@
                    "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
                   )))
 
-    (setq org-hide-leading-stars 1)
+    (setq org-ehtml-allow-agenda 1)
+
+    (setq
+     org-hide-leading-stars 1
+     org-export-with-planning 1
+     org-use-sub-superscripts '{}
+     org-export-with-sub-superscripts '{}
+
+     org-time-clocksum-format (quote (:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t))
+
+
+     ;; Different list levels should use different bullets
+     org-list-demote-modify-bullet '(
+                                     ("*" . "-")
+                                     ("-" . "+")
+                                     ("+" . "-")
+                                     ("1." . "1)")
+                                     ("1)" . "1."))
+
+     org-export-htmlize-output-type 'css
+
+     org-agenda-start-on-weekday nil
+
+     org-html-head "<link rel=\"stylesheet\" href=\"css/style.css\" type=\"text/css\" />"
+
+    )
 
     (setq org-agenda-files (quote ("~/org")))
 
