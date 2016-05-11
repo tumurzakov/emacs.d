@@ -35,7 +35,7 @@
                    "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
                   )))
 
-    (setq org-ehtml-allow-agenda 1)
+    (setq org-ehtml-allow-agenda nil)
 
     (setq
      org-hide-leading-stars 1
@@ -58,7 +58,7 @@
 
      org-agenda-start-on-weekday nil
 
-     org-html-head "<link rel=\"stylesheet\" href=\"css/style.css\" type=\"text/css\" />"
+     org-html-head "<link rel=\"stylesheet\" href=\"/css/style.css\" type=\"text/css\" />"
 
     )
 
@@ -80,6 +80,26 @@
     (defun org-project-open (path)
       "Open project with PATH"
       (funcall 'evil-tabs-tabedit path))
+
+    (setq org-agenda-custom-commands
+          (quote
+           (
+            ("a" "Agenda" agenda "" nil
+             ("~/org/agenda.html"))
+
+            ("p" "Priority=A"
+             ((tags-todo "+PRIORITY=\"A\""
+                         ((org-agenda-overriding-header "Goals")
+                          (org-tags-match-list-sublevels nil))))
+             nil ("~/org/goals.html")
+             )
+
+            ("n" "Agenda and todos" ((agenda "") (alltodo "")) "" nil
+             ("~/org/agendaandtodo.html"))
+
+            )
+           )
+          )
 
     (add-hook 'org-agenda-mode-hook
               (lambda ()
