@@ -5,8 +5,6 @@
   (progn
     (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
     ;; Custom Key Bindings
-    (global-set-key (kbd "<f8>") 'org-cycle-agenda-files)
-    (global-set-key (kbd "C-c c") 'org-capture)
 
     (require 'org-ehtml)
     (setq org-ehtml-docroot (expand-file-name "~/org"))
@@ -62,6 +60,13 @@
 
     )
 
+    (defun org-open-link-same-frame ()
+      (interactive)
+      (if (org-in-regexp org-bracket-link-regexp 1)
+      (let ((filename (org-match-string-no-properties 1) ))
+        (find-file filename)
+        )))
+
     (defun my-org-clocktable-indent-string (level)
       (if (= level 1) ""
         (let ((str " "))
@@ -104,13 +109,23 @@
     (add-hook 'org-agenda-mode-hook
               (lambda ()
                 (org-save-all-org-buffers)
+
+                (local-unset-key (kbd "$"))
+
                 (define-key org-agenda-mode-map "j" 'evil-next-line)
                 (define-key org-agenda-mode-map "k" 'evil-previous-line)
                 (define-key org-agenda-mode-map "h" 'evil-backward-char)
                 (define-key org-agenda-mode-map "l" 'evil-forward-char)
+                (define-key org-agenda-mode-map "$" 'evil-end-of-visual-line)
+                (define-key org-agenda-mode-map "0" 'evil-beginning-of-visual-line)
                 (define-key org-agenda-mode-map (kbd "C-w C-w") 'windmove-left)
                 ))
 
+    (add-hook 'org-mode-hook
+              (lambda()
+                (local-unset-key (kbd "C-c C-f"))
+                (define-key org-mode-map (kbd "C-c C-f") 'org-open-link-same-frame)
+                ))
     )
   )
 
